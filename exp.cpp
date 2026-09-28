@@ -12,6 +12,7 @@ class StudentExam : public Student{
  void display_data(){putdata();cout<<"\nMarks : "<<sub1<<" "<<sub2<<" "<<sub3<<" "<<sub4<<" "<<sub5<<" "<<sub6;}
 };
 class StudentResult : public StudentExam{
- public: void calculate(){per=(sub1+sub2+sub3+sub4+sub5+sub6)/6.0;cout<<"\nPercentage : "<<per<<endl;}
+ public:
+  void calculate(){per=(sub1+sub2+sub3+sub4+sub5+sub6)/6.0;cout<<"\nPercentage : "<<per<<endl;}
 };
 int main(){StudentResult s; s.accept_data(); s.display_data(); s.calculate(); return 0;}
