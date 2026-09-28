@@ -26,7 +26,9 @@ public:
 
 class StudentExam : public Student
 {
-public:
+    private:
+
+    
     int sub1, sub2, sub3, sub4, sub5, sub6;
     float per;
     void accept_data()
