@@ -79,55 +79,56 @@ int main()
  
     return 0;
 }
-/*
+
 // ===== INHERITANCE ACCESS - 9 COMBINATIONs=====
 
 
-
---- 1. BASE = public ---
-a) class Child : public Base
+//
+//--- 1. BASE = public ---
+//a) class Child : public Base
    // public -> public
    // Inside child: YES (as public)
    // From main() d.mem: YES
 
-b) class Child : protected Base
+//b) class Child : protected Base
    // public -> protected
    // Inside child: YES (as protected)
    // From main() d.mem: NO (becomes protected)
 
-c) class Child : private Base
+//c) class Child : private Base
    // public -> private
    // Inside child: YES (as private)
    // From main() d.mem: NO (becomes private)
 
---- 2. BASE = protected ---
-d) class Child : public Base
+//--- 2. BASE = protected ---
+
+//d) class Child : public Base
    // protected -> protected
    // Inside child: YES (as protected)
    // From main() d.mem: NO (protected never from main)
 
-e) class Child : protected Base
+//e) class Child : protected Base
    // protected -> protected
    // Inside child: YES (as protected)
    // From main() d.mem: NO
 
-f) class Child : private Base
+//f) class Child : private Base
    // protected -> private
    // Inside child: YES (as private)
    // From main() d.mem: NO
 
---- 3. BASE = private ---
-g) class Child : public Base
+//--- 3. BASE = private ---
+//g) class Child : public Base
    // private -> NOT ACCESSIBLE
    // Inside child: NO
    // From main() d.mem: NO
 
-h) class Child : protected Base
+//h) class Child : protected Base
    // private -> NOT ACCESSIBLE
    // Inside child: NO
    // From main() d.mem: NO
 
-i) class Child : private Base
+//i) class Child : private Base
    // private -> NOT ACCESSIBLE
    // Inside child: NO
    // From main() d.mem: NO
