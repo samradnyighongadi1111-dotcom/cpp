@@ -1,46 +1,25 @@
-/* File Handling with C++ using ifstream & ofstream class object*/
-/* To write the Content in File*/
-/* Then to read the content of file*/
+// C++ program to demonstrate the use of try,catch and throw in exception handling.
 #include <iostream>
-#include <fstream> // for ifstream, ofstream, fstream classes
 using namespace std;
 
-// Driver Code
-int main()
-{
-    // Creation of ofstream class object
-    ofstream fout;
-    string line;
-
-    // by default ios::out mode, automatically deletes the content of the file. 
-    // To append the content, open in ios:app
-    // fout.open("sample.txt", ios::app)
-    fout.open("sample.txt");
-
-    // Execute a loop If file successfully opened
-    while (fout) {
-        // Read a Line from standard input
-        getline(cin, line);
-        // Press -1 to exit
-        if (line == "-1")
-            break;
-        // Write line in file
-        fout << line << endl;
+double division(int a, int b) {
+    if( b == 0 ) {
+        throw "Division by zero condition!";
     }
- // Close the File
-    fout.close();
+    return (a/b);
+}
 
-    // Creation of ifstream class object to read the file
-    ifstream fin;
-    // by default open mode = ios::in mode
-    fin.open("sample.txt");
+int main() {
+    int x = 50;
+    int y = 0;
+    double z = 0;
 
-    // Execute a loop until EOF (End of File)
-    while (getline(fin, line)) {
-        // Print line (read from file) in Console
-        cout << line << endl;
+    try {
+        z = division(x, y);
+        cout << z << endl;
+    } catch (const char* msg) {
+        cerr << msg << endl;
     }
-    // Close the file
-    fin.close();
+
     return 0;
 }
