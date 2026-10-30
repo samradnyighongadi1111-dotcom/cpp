@@ -10,9 +10,9 @@ class Distance{
         this->inch=i;
     }
     //overloading(-) operator to perform decrement operation of distant object 
-    void operator ()
+    void operator -()
 {
- feet --;
+ feet--;
  inch--;
  cout<<"\nFeet & Inches(Decrement):"<<
  feet <<""<<inch;
